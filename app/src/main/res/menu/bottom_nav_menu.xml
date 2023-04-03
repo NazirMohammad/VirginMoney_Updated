@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragmentRooms"
+        android:icon="@drawable/person_shelter_solid"
+        android:title="Rooms" />
+
+    <item
+        android:id="@+id/fragmentpeople"
+        android:icon="@drawable/person_solid"
+        android:title="People"
+        />
+
+    <item
+        android:id="@+id/detailsFragment2"
+        android:icon="@drawable/details_people"
+        android:title="Details"
+        />
+
+
+</menu>
