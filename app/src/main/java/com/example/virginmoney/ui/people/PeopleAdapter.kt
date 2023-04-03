@@ -8,9 +8,9 @@ import com.bumptech.glide.Glide
 import com.example.virginmoney.R
 import com.example.virginmoney.data.model.people.PeopleModelItemModel
 import com.example.virginmoney.databinding.ItemPeopleBinding
-import kotlinx.coroutines.withContext
 
-class PeopleAdapter(val people: ArrayList<PeopleModelItemModel>?) :
+class PeopleAdapter(val people: ArrayList<PeopleModelItemModel>?,
+                    ) :
     RecyclerView.Adapter<PeopleAdapter.ViewHolder>() {
 
 
@@ -44,9 +44,16 @@ class PeopleAdapter(val people: ArrayList<PeopleModelItemModel>?) :
         holder.handleData(people?.get(position))
 
         holder.itemView.setOnClickListener {
+           // function.invoke(people?.get(position))
+
             people?.get(position)?.let {
                 onItemClick?.invoke(it)
             }
+
+
+//            people?.get(position)?.let {
+//                onItemClick?.invoke(it)
+//            }
 
 
         }

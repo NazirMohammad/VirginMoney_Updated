@@ -12,11 +12,7 @@
         android:title="People"
         />
 
-    <item
-        android:id="@+id/detailsFragment2"
-        android:icon="@drawable/details_people"
-        android:title="Details"
-        />
+
 
 
 </menu>

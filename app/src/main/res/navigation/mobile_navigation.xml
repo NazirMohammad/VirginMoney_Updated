@@ -11,20 +11,27 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_rooms" />
 
+
+<!--    <fragment-->
+<!--        android:id="@+id/detailsFragment2"-->
+<!--        android:name="com.example.virginmoney.DetailsFragment"-->
+<!--        android:label="Details"-->
+<!--        tools:layout="@layout/fragment_details" />-->
+
+
     <fragment
         android:id="@+id/fragmentpeople"
         android:name="com.example.virginmoney.ui.people.PeopleFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_people" >
+        tools:layout="@layout/fragment_people">
         <action
-            android:id="@+id/action_fragmentpeople_to_detailsFragment2"
-            app:destination="@id/detailsFragment2" />
+            android:id="@+id/action_fragmentpeople_to_peopleDetailsFragment"
+            app:destination="@id/peopleDetailsFragment" />
     </fragment>
-
-
     <fragment
-        android:id="@+id/detailsFragment2"
-        android:name="com.example.virginmoney.DetailsFragment"
+        android:id="@+id/peopleDetailsFragment"
+        android:name="com.example.virginmoney.ui.people.details.PeopleDetailsFragment"
         android:label="Details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_people_details" />
+
 </navigation>

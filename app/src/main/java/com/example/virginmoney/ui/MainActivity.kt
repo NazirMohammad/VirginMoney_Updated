@@ -1,6 +1,7 @@
 package com.example.virginmoney.ui
 
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -29,10 +30,37 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.fragmentRooms, R.id.fragmentpeople,R.id.detailsFragment2
+                R.id.fragmentRooms, R.id.fragmentpeople
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+
+        navController.addOnDestinationChangedListener {_ , destination,_  ->
+            when (destination.id) {
+                R.id.fragmentRooms -> {
+                    navView.visibility = View.VISIBLE
+                }
+                R.id.fragmentpeople -> {
+                    navView.visibility = View.VISIBLE
+                }
+
+                else -> {
+                    navView.visibility = View.GONE
+                }
+            }
+
+
+        }
     }
-}
+
+
+    override fun onSupportNavigateUp(): kotlin.Boolean {
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
+    }
+

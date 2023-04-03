@@ -30,11 +30,7 @@
                 android:layout_centerHorizontal="true"
                 android:innerRadius="0dp"
                 android:shape="ring"
-                android:thicknessRatio="1.9"
-
-
-
-                />
+                android:thicknessRatio="1.9"/>
 
 
 
